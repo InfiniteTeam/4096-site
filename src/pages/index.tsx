@@ -42,6 +42,7 @@ const introPage1 = (
         alt="logo"
         width={320}
         height={320}
+        priority
       />
     </div>
   </div>
@@ -56,6 +57,7 @@ const introPage2 = (
         alt="logo"
         width={320}
         height={320}
+        priority
       />
     </div>
     <h1 className="text-5xl font-bold tracking-wide">
