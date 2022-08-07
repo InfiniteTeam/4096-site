@@ -14,19 +14,14 @@ import {
   batch,
   Fade,
   FadeIn,
-  FadeOut,
-  Move,
   MoveIn,
   MoveOut,
   Sticky,
   StickyIn,
-  StickyOut,
-  Zoom,
   ZoomIn,
-  ZoomOut,
 } from 'react-scroll-motion';
 import Navbar from '../components/Navbar';
-import { IconChevronDown, IconPlus } from '@tabler/icons';
+import { IconChevronDown, IconPlus, IconBulb } from '@tabler/icons';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -145,10 +140,9 @@ const Home: NextPage = () => {
 
               <button
                 type="button"
-                className="px-5 py-3 bg-zinc-900/50 shadow-xl rounded-xl text-lg flex items-center mx-auto gap-2 hover:bg-zinc-600/40 transition-all duration-300"
-                onClick={() => console.log('asdf')}
+                className="px-5 py-3 bg-zinc-900/50 shadow-xl rounded-xl text-lg mx-auto hover:bg-zinc-600/40 transition-all duration-300"
               >
-                <a href="/">
+                <a className="flex items-center gap-2" href="/">
                   <IconPlus className="inline-block" /> 서버에 초대하기
                 </a>
               </button>
@@ -241,6 +235,56 @@ const Home: NextPage = () => {
         <ScrollPage>
           <Animator animation={batch(StickyIn())}>
             <IntroPageTwo videoRef={videoRef} />
+          </Animator>
+        </ScrollPage>
+
+        <ScrollPage>
+          <Animator animation={batch(Sticky(), FadeIn(), MoveIn(0, 600))}>
+            <div className="flex flex-col gap-12 w-screen h-screen justify-center items-center">
+              <Image
+                src="/assets/question-block.png"
+                width={100}
+                height={100}
+                priority
+              />
+              <div className="text-center">
+                <h1 className="text-6xl font-light tracking-wide mb-6">
+                  <span className="font-extrabold mr-1">다음 게임</span>은
+                  무엇일까요?
+                </h1>
+                <div className="text-xl mb-12">
+                  여러분의 아이디어를 알려주세요!
+                </div>
+
+                <button
+                  type="button"
+                  className="px-5 py-3 bg-zinc-900/50 shadow-xl rounded-xl text-lg hover:bg-zinc-600/40 transition-all duration-300"
+                >
+                  <a
+                    className="flex items-center gap-2"
+                    href="https://forms.gle/378ndyqLv9nhccwV6"
+                    target="_blank"
+                  >
+                    <IconBulb className="inline-block" /> 아이디어 제안
+                    설문하기!
+                  </a>
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-auto w-full text-zinc-400 font-semibold z-50">
+              <div className="px-8 flex justify-between">
+                <span>Copyright © 2022 InfiniteTeam All rights reserved.</span>
+                <a
+                  className="hover:text-white mr-3"
+                  href="https://inft.kr"
+                  target="_blank"
+                >
+                  Designed by InfiniteTeam
+                </a>
+              </div>
+            </div>
+            <div className="h-16" />
           </Animator>
         </ScrollPage>
       </ScrollContainer>
