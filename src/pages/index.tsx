@@ -133,8 +133,19 @@ const Home: NextPage = () => {
         <ScrollPage>
           <Animator animation={batch(Sticky(), MoveOut(0, -100), Fade())}>
             <div className="text-center">
-              <h1 className="text-9xl font-bold tracking-wide pb-4">4096</h1>
-              <h3 className="text-2xl font-medium pb-12">
+              <div className="flex gap-5 justify-center items-center pb-4">
+                <div className="flex-shrink-0 drop-shadow-2xl">
+                  <Image
+                    className="rounded-full"
+                    src="/4096.png"
+                    width={80}
+                    height={80}
+                  />
+                </div>
+                <h1 className="text-8xl font-bold tracking-wide pb-1">4096</h1>
+              </div>
+
+              <h3 className="text-2xl font-medium pb-12 pt-4">
                 디스코드에서 즐기는 2048 게임봇
               </h3>
 
