@@ -153,7 +153,12 @@ const Home: NextPage = () => {
                 type="button"
                 className="px-5 py-3 bg-zinc-900/50 shadow-xl rounded-xl text-lg mx-auto hover:bg-zinc-600/40 transition-all duration-300"
               >
-                <a className="flex items-center gap-2" href="/">
+                <a
+                  className="flex items-center gap-2 cursor-pointer"
+                  onClick={() => {
+                    alert('아직 준비중입니다!');
+                  }}
+                >
                   <IconPlus className="inline-block" /> 서버에 초대하기
                 </a>
               </button>
