@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           animateScroll.scrollToTop();
         }}
       >
-        4096
+        <Image src="/4096.svg" width={35} height={35} />
       </a>
       <a
         className="ml-auto flex items-center gap-3 text-lg font-semibold px-4 py-2 hover:bg-white/5 transition-all duration-300 rounded-2xl"
