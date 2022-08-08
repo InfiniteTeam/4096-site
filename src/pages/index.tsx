@@ -103,7 +103,10 @@ const Home: NextPage = () => {
       let videoPositon = window.scrollY / window.innerHeight - 9 || 0;
       let nextTime = videoPositon * videoRef.current!.duration;
 
-      videoRef.current!.currentTime = nextTime;
+      videoRef.current!.currentTime = Math.min(
+        nextTime,
+        videoRef.current!.duration
+      ); // video가 시간 초과해서 진행하는것을 방지하기 위함
     };
 
     const handleResize = () => {
