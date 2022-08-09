@@ -1,0 +1,75 @@
+.markdown {
+  color: rgb(231, 228, 228);
+
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  h5 {
+    font-size: 1rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #555;
+  }
+
+  p {
+    line-height: 160%;
+    padding-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  ul {
+    padding-bottom: 1rem;
+    list-style-type: disc;
+  }
+
+  li {
+    line-height: 160%;
+    margin-left: 2rem;
+    font-weight: 300;
+
+    p {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    padding-bottom: 1rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}

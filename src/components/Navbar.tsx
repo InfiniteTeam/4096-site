@@ -1,8 +1,11 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { animateScroll } from 'react-scroll';
 
 const Navbar: React.FC = () => {
+  const router = useRouter();
+
   useEffect(() => {
     const handleResize = () => {
       window.scrollTo({
@@ -18,11 +21,15 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 px-5 py-3 flex items-center bg-transparent backdrop-blur-xl z-[99999] transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 px-5 py-3 flex items-center bg-transparent backdrop-blur-lg z-[99999] transition-all duration-300">
       <a
         className="font-extrabold text-3xl cursor-pointer px-2 py-1"
         onClick={() => {
-          animateScroll.scrollToTop();
+          if (router.pathname === '/') {
+            animateScroll.scrollToTop();
+          } else {
+            router.push('/');
+          }
         }}
       >
         <Image src="/4096.svg" width={35} height={35} />

@@ -24,6 +24,7 @@ import Navbar from '../components/Navbar';
 import { IconChevronDown, IconPlus, IconBulb } from '@tabler/icons';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 const IntroPageOne = () => (
   <div className="w-screen px-28 bg-[#ed4851] h-screen flex justify-center items-center">
@@ -285,11 +286,25 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="mt-auto w-full text-zinc-400 font-semibold z-50">
-              <div className="px-8 flex justify-between">
-                <span>Copyright © 2022 InfiniteTeam All rights reserved.</span>
+            <div className="mt-auto w-full text-zinc-400 z-50">
+              <div className="px-8 flex gap-8 items-center">
+                <span className="font-semibold text-sm">
+                  Copyright © 2022 InfiniteTeam All rights reserved.
+                </span>
+                <Link href="/tos">
+                  <a className="hover:text-white transition-all duration-300">
+                    이용약관
+                  </a>
+                </Link>
                 <a
-                  className="hover:text-white mr-3"
+                  className="hover:text-white transition-all duration-300"
+                  href="https://inft.kr/privacy"
+                  target="_blank"
+                >
+                  개인정보 처리방침
+                </a>
+                <a
+                  className="hover:text-white ml-auto mr-3 font-semibold"
                   href="https://inft.kr"
                   target="_blank"
                 >
