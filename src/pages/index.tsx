@@ -128,7 +128,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>메인 - 4096</title>
+        <title>메인 - 2¹²</title>
       </Head>
 
       <Navbar />

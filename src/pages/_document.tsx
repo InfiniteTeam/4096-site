@@ -1,4 +1,4 @@
-import Document, { Html, Main, NextScript, Head } from "next/document";
+import Document, { Html, Main, NextScript, Head } from 'next/document';
 
 export default class Doc extends Document {
   render() {
@@ -8,16 +8,16 @@ export default class Doc extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#FB3640" />
-          <meta name="description" content="4096 - 디스코드 게임봇" />
+          <meta name="description" content="2¹² - 디스코드 게임봇" />
           <link rel="manifest" href="/manifest.json" />
 
-          <meta name="application-name" content="4096" />
+          <meta name="application-name" content="2¹²" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="4096" />
+          <meta name="apple-mobile-web-app-title" content="2¹²" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="msapplication-TileColor" content="#FB3640" />
