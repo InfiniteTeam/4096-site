@@ -27,14 +27,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 const IntroPageOne = () => (
-  <div className="w-screen px-28 bg-[#ed4851] h-screen flex justify-center items-center">
-    <div className="w-3/4 mr-auto">
-      <h1 className="text-5xl font-bold tracking-wide mb-10">
+  <div className="w-screen px-10 sm:px-28 pb-56 sm:pb-0 bg-[#ed4851] h-screen flex justify-center items-center">
+    <div className="sm:w-3/4 sm:mr-auto">
+      <h1
+        className="text-2xl sm:text-5xl text-center sm:text-left font-bold tracking-wide mb-10"
+        style={{
+          wordBreak: 'keep-all',
+        }}
+      >
         2048 게임을 디스코드 안에서.
       </h1>
 
       <div
-        className="text-xl w-3/4 leading-relaxed"
+        className="text-sm sm:text-xl sm:w-3/4 leading-relaxed text-center sm:text-left"
         style={{ wordBreak: 'keep-all' }}
       >
         단순하면서도 은근히 머리를 써야 하는 게임. 디스코드에서 즐겨보세요.
@@ -46,8 +51,8 @@ const IntroPageOne = () => (
 );
 
 const IntroImageOne = () => (
-  <div className="w-screen flex justify-end pr-32">
-    <div className=" bg-[#2A2B30] px-2 pt-2 pb-0.5 rounded-lg">
+  <div className="w-screen flex justify-center h-screen items-end sm:items-center pb-28 sm:pb-0 sm:justify-end sm:pr-32">
+    <div className="w-48 h-48 sm:w-80 sm:h-80 bg-[#2A2B30] px-2 pt-2 pb-0.5 rounded-lg">
       <Image
         src="/assets/screenshot-1.png"
         alt="logo"
@@ -63,11 +68,27 @@ const IntroPageTwo: React.FC<{
   videoRef: React.RefObject<HTMLVideoElement>;
 }> = ({ videoRef }) => (
   <div
-    className="w-screen px-28 bg-[#5048ed] flex justify-center gap-8 items-center text-right -mt-5"
+    className="w-screen px-10 sm:px-28 bg-[#5048ed] flex flex-col sm:flex-row-reverse justify-center sm:gap-8 items-center text-right -mt-5"
     style={{
       height: 'calc(100vh + 1.25rem)',
     }}
   >
+    <div>
+      <h1
+        className="text-2xl sm:text-5xl text-center sm:text-right font-bold tracking-wide mb-10"
+        style={{
+          wordBreak: 'keep-all',
+        }}
+      >
+        심플, 하지만 풍부하게.
+      </h1>
+
+      <div className="text-sm ml-auto sm:text-xl w-1/2 sm:w-3/4 leading-relaxed text-center sm:text-right">
+        명령어는 필요한 것만 최소한으로 줄였습니다. 여러분이 굳이 명령어를
+        입력하지 않아도 자동으로 진행 상황을 저장해주고 똑똑하게 처리해주죠.
+        최상의 게임 완성도와 디자인 퀄리티를 제공합니다.
+      </div>
+    </div>
     <div>
       <video
         ref={videoRef}
@@ -77,20 +98,6 @@ const IntroPageTwo: React.FC<{
         playsInline
         src="/assets/play.mp4"
       />
-    </div>
-    <div>
-      <h1 className="text-5xl font-bold tracking-wide mb-10">
-        심플, 하지만 풍부하게.
-      </h1>
-
-      <div
-        className="ml-auto text-xl w-3/4 leading-relaxed"
-        style={{ wordBreak: 'keep-all' }}
-      >
-        명령어는 필요한 것만 최소한으로 줄였습니다. 여러분이 굳이 명령어를
-        입력하지 않아도 자동으로 진행 상황을 저장해주고 똑똑하게 처리해주죠.
-        최상의 게임 완성도와 디자인 퀄리티를 제공합니다.
-      </div>
     </div>
   </div>
 );
@@ -136,14 +143,14 @@ const Home: NextPage = () => {
       <ScrollContainer>
         <ScrollPage>
           <Animator animation={batch(Sticky(), MoveOut(0, -100), Fade())}>
-            <div className="text-center">
+            <div className="text-center w-screen px-10">
               <div className="flex gap-5 justify-center items-center pb-4">
                 <div className="flex-shrink-0 drop-shadow-2xl">
                   <Image src="/4096.svg" width={150} height={150} />
                 </div>
               </div>
 
-              <h3 className="text-2xl font-medium pb-12">
+              <h3 className="text-xl sm:text-2xl font-medium pb-12">
                 디스코드에서 즐기는 2048 게임봇
               </h3>
 
@@ -153,9 +160,8 @@ const Home: NextPage = () => {
               >
                 <a
                   className="flex items-center gap-2 cursor-pointer"
-                  onClick={() => {
-                    alert('아직 준비중입니다!');
-                  }}
+                  href="https://discord.com/api/oauth2/authorize?client_id=536095637368864779&permissions=347200&scope=bot%20applications.commands"
+                  target="_blank"
                 >
                   <IconPlus className="inline-block" /> 서버에 초대하기
                 </a>
@@ -185,7 +191,7 @@ const Home: NextPage = () => {
           <Animator
             animation={batch(Sticky(), FadeIn(), MoveIn(50, 0), ZoomIn())}
           >
-            <h1 className="text-[180px] font-bold tracking-wide  mb-10">2¹²</h1>
+            <h1 className="text-[180px] font-bold tracking-wide mb-10">2¹²</h1>
           </Animator>
         </ScrollPage>
 
@@ -197,7 +203,7 @@ const Home: NextPage = () => {
 
         <ScrollPage>
           <Animator animation={batch(Sticky(), FadeIn())}>
-            <h1 className="text-3xl font-medium tracking-wide mt-64">
+            <h1 className="text-3xl font-medium tracking-wide leading-relaxed mt-64 text-center w-screen">
               디스코드 미니 게임봇.
             </h1>
           </Animator>
@@ -208,7 +214,7 @@ const Home: NextPage = () => {
             <h1 className="text-[180px] font-bold tracking-wide mb-10">2¹²</h1>
           </Animator>
           <Animator animation={batch(StickyIn())}>
-            <h1 className="text-3xl font-medium tracking-wide mt-64">
+            <h1 className="text-3xl font-medium tracking-wide leading-relaxed mt-64 text-center w-screen">
               디스코드 미니 게임봇.
             </h1>
           </Animator>
@@ -254,15 +260,17 @@ const Home: NextPage = () => {
 
         <ScrollPage>
           <Animator animation={batch(Sticky(), FadeIn(), MoveIn(0, 600))}>
-            <div className="flex flex-col gap-12 w-screen h-screen justify-center items-center">
-              <Image
-                src="/assets/question-block.png"
-                width={100}
-                height={100}
-                priority
-              />
+            <div className="flex flex-col gap-12 w-screen h-screen justify-center items-center px-10">
+              <div>
+                <Image
+                  src="/assets/question-block.png"
+                  width={100}
+                  height={100}
+                  priority
+                />
+              </div>
               <div className="text-center">
-                <h1 className="text-6xl font-light tracking-wide mb-6">
+                <h1 className="text-3xl sm:text-6xl font-light tracking-wide mb-6">
                   <span className="font-extrabold mr-1">다음 게임</span>은
                   무엇일까요?
                 </h1>
@@ -287,7 +295,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mt-auto w-full text-zinc-400 z-50">
-              <div className="px-8 flex gap-8 items-center">
+              <div className="px-8 flex flex-col sm:flex-row gap-8 items-center">
                 <span className="font-semibold text-sm">
                   Copyright © 2022 InfiniteTeam All rights reserved.
                 </span>
