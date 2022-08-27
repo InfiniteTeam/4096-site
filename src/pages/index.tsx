@@ -297,7 +297,7 @@ const Home: NextPage = () => {
             <div className="mt-auto w-full text-zinc-400 z-50">
               <div className="px-8 flex flex-col sm:flex-row gap-8 items-center">
                 <span className="font-semibold text-sm">
-                  Copyright © 2022 InfiniteTeam All rights reserved.
+                  Copyright © 2022 Infinite Studio All rights reserved.
                 </span>
                 <Link href="/tos">
                   <a className="hover:text-white transition-all duration-300">
@@ -316,7 +316,7 @@ const Home: NextPage = () => {
                   href="https://inft.kr"
                   target="_blank"
                 >
-                  Designed by InfiniteTeam
+                  Designed by Infinite Studio
                 </a>
               </div>
             </div>

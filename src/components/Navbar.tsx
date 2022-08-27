@@ -41,8 +41,8 @@ const Navbar: React.FC = () => {
         rel="norefferrer"
       >
         <span className="font-light">By</span>
-        <Image src="/infiniteteam.svg" priority width={20} height={20} />
-        <span className="text-xl">InfiniteTeam</span>
+        <Image src="/infinite-studio.svg" priority width={20} height={20} />
+        <span className="text-xl">Infinite Studio</span>
       </a>
     </nav>
   );

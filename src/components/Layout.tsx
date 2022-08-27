@@ -15,7 +15,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div className="w-full text-zinc-400 z-50 pb-8">
         <div className="px-8 flex gap-8 items-center">
           <span className="font-semibold text-sm">
-            Copyright © 2022 InfiniteTeam All rights reserved.
+            Copyright © 2022 Infinite Studio All rights reserved.
           </span>
           <Link href="/tos">
             <a className="hover:text-white transition-all duration-300">
@@ -34,7 +34,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             href="https://inft.kr"
             target="_blank"
           >
-            Designed by InfiniteTeam
+            Designed by Infinite Studio
           </a>
         </div>
       </div>
